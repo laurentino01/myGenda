@@ -9,12 +9,18 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: 'latest'
       - run: npm i @angular/cli
       - run: npm install
       - run: npm run build
-      - run: sudo apt install openssh-server
-      - run: sudo apt install openssh-server
-      - run: ssh vps53057@191.252.113.54
-      - run: root
-      - run: Quartamarcha@4
+
+  conect-ssh:
+      runs-on: ubuntu-latest
+      steps:
+        - uses: appleboy/ssh-action@v1.0.3
+          with:
+            host: 'vps53057@191.252.113.54'
+            username: 'root'
+            password: 'Quartamarcha@4'
+            port: '2'
+            script: whoami
