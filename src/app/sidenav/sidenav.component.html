@@ -1,0 +1,9 @@
+<ul>
+  <li *ngFor="let menu_item of menu_itens">
+    <mat-card class="dashboard__sidenav__button">
+      <button mat-button>
+        <mat-card-content> {{ menu_item.name }} </mat-card-content>
+      </button>
+    </mat-card>
+  </li>
+</ul>

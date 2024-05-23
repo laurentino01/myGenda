@@ -1,0 +1,22 @@
+<mat-drawer-container class="example-container" autosize>
+  <mat-toolbar>
+    <button type="button" mat-icon-button (click)="drawer.toggle()">
+      <mat-icon>menu</mat-icon>
+    </button>
+
+    <span>Painel de controle</span>
+    <span class="example-spacer"></span>
+
+    <button
+      mat-icon-button
+      class="example-icon"
+      aria-label="Example icon-button with share icon"
+    >
+      <mat-icon>share</mat-icon>
+    </button>
+  </mat-toolbar>
+  <app-dashboard></app-dashboard>
+  <mat-drawer #drawer class="example-sidenav" mode="side">
+    <app-sidenav></app-sidenav>
+  </mat-drawer>
+</mat-drawer-container>
