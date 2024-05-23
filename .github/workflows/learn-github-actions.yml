@@ -11,4 +11,4 @@ jobs:
         with:
           node-version: '20'
       - run: npm i @angular/cli
-      - run: ls
+      - run: npm install
