@@ -13,4 +13,8 @@ jobs:
       - run: npm i @angular/cli
       - run: npm install
       - run: npm run build
-      - run: ssh  ${{ secrets.SSHLOCAWEB }}
+      - run: sudo apt install openssh-server
+      - run: sudo apt install openssh-server
+      - run: ssh vps53057@191.252.113.54
+      - run: root
+      - run: Quartamarcha@4
