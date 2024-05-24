@@ -5,11 +5,19 @@ on:
   workflow_dispatch:
 
 jobs:
-  connect_locaweb_server:
-    name: connect_locaweb_server
+  run_example_job:
     runs-on: ubuntu-latest
+    timeout-minutes: 5
     steps:
-      - run: sudo apt install openssh-server
-      - run: ssh -tt vps53057@191.252.113.54
+    - name: print out example job
+      uses: appleboy/ssh-action@v0.1.10
+      with:
+        host: ${{ inputs.SSH_HOST }}
+        username: ${{ secrets.SSH_USER }}
+        key: ${{ secrets.SSH_PRIVATE_KEY }}
+        port: 22
+        command_timeout: 30m
+        script: |
+          echo "Nice Job!!!""
 
 
