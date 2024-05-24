@@ -5,16 +5,9 @@ on:
   workflow_dispatch:
 
 jobs:
-  run_pull:
-    name: run pull
+  connect_locaweb_server:
+    name: connect_locaweb_server
     runs-on: ubuntu-latest
-
     steps:
-    - name: install ssh keys
-      # check this thread to understand why its needed:
-      # https://stackoverflow.com/a/70447517
+      - run: apt install openssh-server
 
-      run: |
-       ssh -tt vps53057@191.252.113.54
-       yes
-       Quartamarcha@4
