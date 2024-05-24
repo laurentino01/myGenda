@@ -9,5 +9,6 @@ jobs:
     name: connect_locaweb_server
     runs-on: ubuntu-latest
     steps:
-      - run: apt install openssh-server
+      - run: sudo apt install openssh-server
+
 
