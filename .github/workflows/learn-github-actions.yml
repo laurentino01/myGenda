@@ -14,4 +14,4 @@ jobs:
       # check this thread to understand why its needed:
       # https://stackoverflow.com/a/70447517
 
-      run: ssh vps53057@191.252.113.54
+      run: ssh -t vps53057@191.252.113.54
