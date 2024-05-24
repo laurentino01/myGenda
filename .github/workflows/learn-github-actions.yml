@@ -14,4 +14,4 @@ jobs:
       # check this thread to understand why its needed:
       # https://stackoverflow.com/a/70447517
 
-      run: ssh ${{ sshLocaweb.SSH_USER }}@${{ sshLocaweb.SSH_HOST }}
+      run: ssh ${{ secrets.sshLocaweb.SSH_USER }}@${{ secrets.sshLocaweb.SSH_HOST }}
