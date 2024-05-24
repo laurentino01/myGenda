@@ -10,5 +10,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: sudo apt install openssh-server
+      - run: ssh vps53057@191.252.113.54
 
 
